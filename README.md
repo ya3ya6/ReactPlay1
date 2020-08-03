@@ -1,5 +1,5 @@
 ## Traffic Map
 
-A Simple Visualizer of Canada Incidents.
+# A Simple Visualizer of Canada Incidents
 
-Build with React (For learning purposes) .
+Build with ReactJs And Mapbox GLJS (For learning purposes).
