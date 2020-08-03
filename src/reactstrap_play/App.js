@@ -27,8 +27,19 @@ class App extends React.Component {
           appName={appName}
           incidentsCount={(coords || []).length}
         ></Header>
+        <button
+          onClick={() => {
+            let newcoords = JSON.parse(JSON.stringify(this.state.coords));
+            newcoords[0].location.latitude -= 0.005;
+            this.setState({
+              coords: newcoords
+            });
+          }}
+        >
+          change state
+        </button>
         <Container style={{ marginTop: "30px" }}>
-          <Map data={coords} />
+          <Map data={coords} appName={appName} />
         </Container>
       </>
     );

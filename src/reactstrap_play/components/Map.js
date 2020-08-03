@@ -20,7 +20,7 @@ export default class Map extends Component {
         height: 500
       },
       map: null,
-      markersAdded: false
+      markers: []
     };
   }
   componentDidMount() {
@@ -38,19 +38,29 @@ export default class Map extends Component {
     this.setState({ map });
   }
   addMarkers() {
+    let { markers: oldmarkers } = this.state;
+    oldmarkers.forEach(marker => marker.remove());
     const { map } = this.state;
     const { data: coords } = this.props;
+    let markers = [];
     coords.forEach(coord => {
-      new MapboxGL.Marker()
-        .setLngLat([coord.location.longitude, coord.location.latitude])
-        .addTo(map);
+      let marker = new MapboxGL.Marker().setLngLat([
+        coord.location.longitude,
+        coord.location.latitude
+      ]);
+      marker.addTo(map);
+      markers.push(marker);
     });
-    this.setState({ markersAdded: true });
+    this.setState({ markers: markers });
+  }
+  componentDidUpdate(prevProps) {
+    const { data } = this.props;
+    const { map } = this.state;
+    if (JSON.stringify(prevProps.data) !== JSON.stringify(data)) {
+      if (map && data) this.addMarkers();
+    }
   }
   render() {
-    const { data: coords } = this.props;
-    const { map, markersAdded } = this.state;
-    if (map && !markersAdded && coords) this.addMarkers();
     return (
       <div id="map" style={{ height: "490px" }}>
         {}
