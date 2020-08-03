@@ -7,3 +7,5 @@ A Simple Visualizer of Canada Incidents, built with ReactJs And Mapbox GLJS (For
 `yarn install`
 
 `yarn start`
+
+# master
