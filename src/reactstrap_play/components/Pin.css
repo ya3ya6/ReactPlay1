@@ -1,0 +1,7 @@
+.svg {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.svg:hover {
+  opacity: 1;
+}
