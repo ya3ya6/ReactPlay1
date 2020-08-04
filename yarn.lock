@@ -10085,6 +10085,11 @@ rc@^1.0.1, rc@^1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-app-menu@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-app-menu/-/react-app-menu-1.0.9.tgz#91242a14be6c023163fccf82d7d428ab0bad7183"
+  integrity sha512-ow60GXoUb7CfPdDwliEZj6Mji2XjVTFX+poZ24XQ0UuWuPi251uWIMQUhF9iqp6XyH0TbvHJHE3qeBI1wB0XHA==
+
 react-app-polyfill@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-1.0.6.tgz#890f8d7f2842ce6073f030b117de9130a5f385f0"
