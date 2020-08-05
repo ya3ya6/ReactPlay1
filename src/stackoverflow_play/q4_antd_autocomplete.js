@@ -1,4 +1,4 @@
-//https://stackoverflow.com/questions/63256451/ant-design-autocomplete-need-to-not-show-value/63256843?noredirect=1#comment111857546_63256843
+//https://stackoverflow.com/questions/63256451/ant-design-autocomplete-need-to-not-show-value
 
 import React, { useState } from "react";
 import { AutoComplete, Input } from "antd";
