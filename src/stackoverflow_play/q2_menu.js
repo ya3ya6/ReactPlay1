@@ -12,6 +12,8 @@ const MenuToolBar = () => {
     setTimeout(() => {
       openModal();
       setSelectedFile({ name: menuId });
+      if (typeof angularMenuSelect !== "undefined")
+        eval("angularMenuSelect('" + menuId + "')");
     }, 500);
   };
 
